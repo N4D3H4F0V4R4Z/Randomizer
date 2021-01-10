@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Db-ag-70U">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Randomizer View Controller-->
+        <scene sceneID="oWN-id-agf">
+            <objects>
+                <viewController id="8Db-ag-70U" customClass="RandomizerViewController" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WmM-XR-goZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNV-5A-uwK">
+                                <rect key="frame" x="32" y="352.5" width="350" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="Nah-YC-kE6"/>
+                                    <constraint firstAttribute="width" constant="350" id="xB6-yT-5Kk"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="100" name="Zapfino"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Su-uY-naD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <action selector="getRandomNumber" destination="8Db-ag-70U" eventType="touchUpInside" id="zdb-5K-yaU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p9Y-M1-LMJ"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="aNV-5A-uwK" firstAttribute="centerX" secondItem="p9Y-M1-LMJ" secondAttribute="centerX" id="5Cp-Zr-EeU"/>
+                            <constraint firstAttribute="bottom" secondItem="7Su-uY-naD" secondAttribute="bottom" id="Bmc-ux-aiM"/>
+                            <constraint firstItem="7Su-uY-naD" firstAttribute="trailing" secondItem="p9Y-M1-LMJ" secondAttribute="trailing" id="aU4-QI-QIF"/>
+                            <constraint firstItem="7Su-uY-naD" firstAttribute="top" secondItem="WmM-XR-goZ" secondAttribute="top" id="bpR-S1-R5A"/>
+                            <constraint firstItem="aNV-5A-uwK" firstAttribute="centerY" secondItem="p9Y-M1-LMJ" secondAttribute="centerY" id="wnM-G9-2nr"/>
+                            <constraint firstItem="7Su-uY-naD" firstAttribute="leading" secondItem="p9Y-M1-LMJ" secondAttribute="leading" id="xuQ-iZ-0KF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="p4Q-Mk-jOA"/>
+                    <connections>
+                        <outlet property="numberLabelView" destination="aNV-5A-uwK" id="vPf-Bu-oTH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mou-lL-Rza" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697.10144927536237" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
